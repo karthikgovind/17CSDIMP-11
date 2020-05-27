@@ -1,0 +1,502 @@
+{
+  "intents": [
+    {
+      "intent": "COVID-19_UPDATES",
+      "examples": [
+        {
+          "text": "CURRENT STATISTICS OF COVID-19"
+        },
+        {
+          "text": "yes"
+        },
+        {
+          "text": "POSITIVE CASES"
+        },
+        {
+          "text": "CURRENT CASES"
+        },
+        {
+          "text": "CURRENT STATISTICS OF CORONA VIRUS"
+        },
+        {
+          "text": "DEATHS"
+        },
+        {
+          "text": "RECOVERED CASES"
+        },
+        {
+          "text": "UPDATES"
+        },
+        {
+          "text": "UPDATES OF COVID-19"
+        },
+        {
+          "text": "DISEASE UPDATES"
+        },
+        {
+          "text": "yes, updates"
+        },
+        {
+          "text": "yes updates"
+        },
+        {
+          "text": "i want updates on this covid-19"
+        },
+        {
+          "text": "CURRENT UPDATES OF COVID-19"
+        },
+        {
+          "text": "CURRENT UPDATES OF CORONA VIRUS"
+        },
+        {
+          "text": "CURRENT UPDATES"
+        }
+      ],
+      "description": "COVID-19 UPDATES"
+    },
+    {
+      "intent": "EPASS_CATEGORIES",
+      "examples": [
+        {
+          "text": "categories of e-passes"
+        },
+        {
+          "text": "categories of epasses"
+        },
+        {
+          "text": "what kind of e-passes will be provided"
+        },
+        {
+          "text": "different types of e-passes"
+        },
+        {
+          "text": "What type of e-pass will be issued"
+        }
+      ],
+      "description": "CATEGORIES OF EPASS"
+    },
+    {
+      "intent": "greeting",
+      "examples": [
+        {
+          "text": "HEY"
+        },
+        {
+          "text": "good afternoon"
+        },
+        {
+          "text": "good evening"
+        },
+        {
+          "text": "good morning"
+        },
+        {
+          "text": "HI"
+        },
+        {
+          "text": "HELLO"
+        }
+      ],
+      "description": "greetings"
+    },
+    {
+      "intent": "EPASS_INFO",
+      "examples": [
+        {
+          "text": "WHY WE NEED EPASS"
+        },
+        {
+          "text": "WHAT IS EPASS"
+        },
+        {
+          "text": "WHAT IS EPASS DURING CRISIS TIME"
+        },
+        {
+          "text": "WHAT IS THE USE OF EPASS DURING CRISIS TIME"
+        },
+        {
+          "text": "WHY EPASS IS NEEDED"
+        },
+        {
+          "text": "WHY ONE IS REQUIRE EPASS"
+        }
+      ],
+      "description": "EPASS INFO"
+    },
+    {
+      "intent": "BYE",
+      "examples": [
+        {
+          "text": "THANK YOU BUDDY"
+        },
+        {
+          "text": "THANK YOU FOR UPDATES"
+        },
+        {
+          "text": "THANK YOU COVID-19 BOT"
+        },
+        {
+          "text": "no"
+        },
+        {
+          "text": "YOU ARE SUCH A NICE BOT"
+        },
+        {
+          "text": "GOOD INFO"
+        },
+        {
+          "text": "THANK YOU BOT"
+        },
+        {
+          "text": "TNQ FOR UPDATES"
+        },
+        {
+          "text": "YOU ARE SO NICE"
+        },
+        {
+          "text": "THANK YOU COVID-19"
+        },
+        {
+          "text": "THANK YOU COVID-19 CHATBOT"
+        },
+        {
+          "text": "no, thank you"
+        },
+        {
+          "text": "no tanq"
+        },
+        {
+          "text": "no thank you"
+        },
+        {
+          "text": "no, tnq"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "HOW_TO_APPLY",
+      "examples": [
+        {
+          "text": "WHERE CAN I APPLY E-PASS"
+        },
+        {
+          "text": "WHERE CAN I APPLY EPASS"
+        },
+        {
+          "text": "HOW TO APPLY"
+        },
+        {
+          "text": "HOW TO APPLY E-PASS"
+        },
+        {
+          "text": "HOW TO APPLY EPASS"
+        },
+        {
+          "text": "I WANT E-PASS"
+        },
+        {
+          "text": "I WANT EPASS"
+        },
+        {
+          "text": "WHERE CAN I APPLY"
+        }
+      ],
+      "description": "HOW TO APPLY"
+    }
+  ],
+  "entities": [
+    {
+      "entity": "yes_no",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "yes_no",
+          "synonyms": [
+            "no",
+            "don't want",
+            "not required",
+            "enough",
+            "yes",
+            "yep"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Name",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Name",
+          "synonyms": [
+            "i'm",
+            "im",
+            "my name is"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "HOW TO APPLY",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "You can apply @ https://gramawardsachivalayam.ap.gov.in/CVPASSAPP/CV/CVOrganizationRegistration"
+              },
+              {
+                "text": "I hope this link helps you."
+              },
+              {
+                "text": "Anything else you want."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_8_1590303371901",
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "conditions": "#HOW_TO_APPLY",
+      "dialog_node": "node_5_1590304200620"
+    },
+    {
+      "type": "standard",
+      "title": "BYE",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Thank you. Have a Nice Day. Stay home stay safe..."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1590301285185",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "Welcome"
+      },
+      "conditions": "@yes_no:no",
+      "dialog_node": "node_4_1590563325607",
+      "previous_sibling": "node_8_1590303371901"
+    },
+    {
+      "type": "standard",
+      "title": "EPASS_CATEGORIES",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Any eligible individual/group can apply for the movement pass"
+              },
+              {
+                "text": "1. organizations which are engaged in manufacturing"
+              },
+              {
+                "text": "2. Transport"
+              },
+              {
+                "text": "3. Sale of essential commodities "
+              },
+              {
+                "text": "4. Essential services"
+              },
+              {
+                "text": "• Only 20 % of the Organization Staff is entitled to work (minimum of 5) & issuance of Covic-19 E-Pass with prescribed terms & conditions."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_9_1590301285185",
+      "conditions": "#EPASS_CATEGORIES",
+      "dialog_node": "node_8_1590303371901"
+    },
+    {
+      "type": "standard",
+      "title": "COVID-19 UPDATES",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Yep, Click on the URL to get the COVID-19 updates in INDIA @ https://mygov.in/covid-19/"
+              },
+              {
+                "text": "I hope this link helps you."
+              },
+              {
+                "text": ""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_5_1590304200620",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_4_1590563325607"
+      },
+      "conditions": "#COVID-19_UPDATES",
+      "dialog_node": "node_1_1590565583406"
+    },
+    {
+      "type": "slot",
+      "parent": "node_7_1590294926698",
+      "variable": "$Name",
+      "dialog_node": "slot_7_1590296949285",
+      "previous_sibling": "node_9_1590301285185"
+    },
+    {
+      "type": "event_handler",
+      "parent": "node_7_1590294926698",
+      "event_name": "focus",
+      "dialog_node": "handler_2_1590296945943",
+      "previous_sibling": "slot_7_1590296949285"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Government has taken the step to issue Covid-19 Emergency Passes to organisations which are engaged in manufacturing, transport, sale of essential commodities and providing essential services, by working with limited staff to ensure availability of essential commodities and services in the state."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1590294926698",
+      "conditions": "#EPASS_INFO",
+      "dialog_node": "node_9_1590301285185"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "May I know your Name."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_7_1590296949285",
+      "event_name": "focus",
+      "dialog_node": "handler_9_1590296949290",
+      "previous_sibling": "handler_10_1590296949290"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_7_1590296949285",
+      "context": {
+        "Name": "@Name"
+      },
+      "conditions": "@Name",
+      "event_name": "input",
+      "dialog_node": "handler_10_1590296949290"
+    },
+    {
+      "type": "frame",
+      "title": "E-PASS BOT",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I'm E-PASS CHATBOT. How can I help you."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#greeting",
+      "dialog_node": "node_7_1590294926698",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hi!!!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "My first skill",
+  "language": "en",
+  "description": ""
+}
